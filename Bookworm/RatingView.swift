@@ -27,14 +27,17 @@ struct RatingView: View {
             }
             
             ForEach(0..<maximumRating) { number in
-                Button(action: {
-                    rating = number + 1
-                }) {
-                    number < rating ? onImage : (offImage ?? onImage)
-                }
-                .foregroundColor(number < rating ? onColor : offColor)
+                image(for: number)
+                    .foregroundColor(number < rating ? onColor : offColor)
+                    .onTapGesture {
+                        rating = number + 1
+                    }
             }
         }
+    }
+    
+    func image(for number: Int) -> Image {
+        number < rating ? onImage : (offImage ?? onImage)
     }
 }
 
