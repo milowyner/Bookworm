@@ -14,6 +14,7 @@
 		057E915B26D16DAD006E887C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057E915A26D16DAD006E887C /* Assets.xcassets */; };
 		057E915E26D16DAD006E887C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057E915D26D16DAD006E887C /* Preview Assets.xcassets */; };
 		057E916126D16DAD006E887C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057E915F26D16DAD006E887C /* LaunchScreen.storyboard */; };
+		05994ED426D19052008338F0 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05994ED326D19052008338F0 /* AddBookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		057E915D26D16DAD006E887C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		057E916026D16DAD006E887C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		057E916226D16DAD006E887C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05994ED326D19052008338F0 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				057E915126D16DAB006E887C /* AppDelegate.swift */,
 				057E915326D16DAB006E887C /* SceneDelegate.swift */,
 				057E915526D16DAB006E887C /* ContentView.swift */,
+				05994ED326D19052008338F0 /* AddBookView.swift */,
 				057E915A26D16DAD006E887C /* Assets.xcassets */,
 				057E915F26D16DAD006E887C /* LaunchScreen.storyboard */,
 				057E916226D16DAD006E887C /* Info.plist */,
@@ -152,6 +155,7 @@
 				057E915926D16DAB006E887C /* Bookworm.xcdatamodeld in Sources */,
 				057E915426D16DAB006E887C /* SceneDelegate.swift in Sources */,
 				057E915626D16DAB006E887C /* ContentView.swift in Sources */,
+				05994ED426D19052008338F0 /* AddBookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +299,7 @@
 				DEVELOPMENT_TEAM = 6NZ2YFKUT7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bookworm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +321,7 @@
 				DEVELOPMENT_TEAM = 6NZ2YFKUT7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bookworm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
