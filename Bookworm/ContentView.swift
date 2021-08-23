@@ -32,17 +32,25 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onDelete(perform: deleteBooks)
             }
-                .navigationBarTitle("Bookworm")
-                .navigationBarItems(trailing: Button(action: {
-                    self.showingAddScreen.toggle()
-                }) {
-                    Image(systemName: "plus")
-                })
-                .sheet(isPresented: $showingAddScreen) {
-                    AddBookView().environment(\.managedObjectContext, context)
-                }
+            .navigationBarTitle("Bookworm")
+            .navigationBarItems(leading: EditButton(), trailing: Button(action: {
+                self.showingAddScreen.toggle()
+            }) {
+                Image(systemName: "plus")
+            })
+            .sheet(isPresented: $showingAddScreen) {
+                AddBookView().environment(\.managedObjectContext, context)
+            }
         }
+    }
+    
+    func deleteBooks(at offsets: IndexSet) {
+        for offset in offsets {
+            context.delete(books[offset])
+        }
+        try? context.save()
     }
 }
 
