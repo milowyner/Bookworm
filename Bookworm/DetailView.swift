@@ -39,8 +39,8 @@ struct DetailView: View {
             Text(book.review ?? "No review")
                 .padding()
             
-            if let date = book.date {
-                Text(formattedDate(date))
+            if let date = book.formattedDate {
+                Text(date)
                     .italic()
                     .padding(.bottom)
             }
@@ -68,13 +68,6 @@ struct DetailView: View {
         context.delete(book)
         try? context.save()
         presentationMode.wrappedValue.dismiss()
-    }
-    
-    func formattedDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .short
-        return formatter.string(from: date)
     }
 }
 
