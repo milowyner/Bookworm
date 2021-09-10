@@ -26,18 +26,21 @@ struct RatingView: View {
                 Text(label)
             }
             
-            ForEach(0..<maximumRating) { number in
+            ForEach(1..<maximumRating + 1) { number in
                 image(for: number)
-                    .foregroundColor(number < rating ? onColor : offColor)
+                    .foregroundColor(number <= rating ? onColor : offColor)
                     .onTapGesture {
                         rating = number + 1
                     }
+                    .accessibility(label: Text("\(number) \(number == 1 ? "star" : "stars")"))
+                    .accessibility(removeTraits: .isImage)
+                    .accessibility(addTraits: number <= rating ? [.isButton, .isSelected] : .isButton)
             }
         }
     }
     
     func image(for number: Int) -> Image {
-        number < rating ? onImage : (offImage ?? onImage)
+        number <= rating ? onImage : (offImage ?? onImage)
     }
 }
 
