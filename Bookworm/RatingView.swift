@@ -30,7 +30,7 @@ struct RatingView: View {
                 image(for: number)
                     .foregroundColor(number <= rating ? onColor : offColor)
                     .onTapGesture {
-                        rating = number + 1
+                        rating = number
                     }
                     .accessibility(label: Text("\(number) \(number == 1 ? "star" : "stars")"))
                     .accessibility(removeTraits: .isImage)
